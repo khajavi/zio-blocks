@@ -310,6 +310,12 @@ Scope.global.scoped { connScope =>
 // Connection closed here
 ```
 
+### Getting Started
+
+New to Scope? Check out the [Scope Tutorial](./guides/compile-time-resource-safety-with-scope.md) for a comprehensive step-by-step guide that walks you through the concepts, patterns, and real-world examples. The tutorial is designed for newcomers and covers everything from basic resource management to advanced dependency injection.
+
+For detailed API documentation, see the [Scope Reference](./reference/resource-management/scope.md).
+
 ---
 
 ## Docs
@@ -597,6 +603,7 @@ ZIO Blocks supports **Scala 2.13** and **Scala 3.x** with full source compatibil
 - [Codec & Format](./reference/codec.md) - Codec, Format, BinaryCodec & TextCodec
 - [JSON](./reference/json.md) - JSON codec and parsing
 - [JsonPatch](./reference/json-patch.md) - Diff and patch JSON values
+- [JsonDiffer](./reference/json-differ.md) - Compute minimal diffs between JSON values
 - [JSON Schema](./reference/json-schema.md) - JSON Schema generation and validation
 - [Formats](./reference/formats.md) - Avro, TOON, MessagePack, BSON, Thrift
 - [Extension Syntax](./reference/syntax.md) - `.toJson`, `.fromJson`, and more
@@ -613,8 +620,13 @@ ZIO Blocks supports **Scala 2.13** and **Scala 3.x** with full source compatibil
 ### Other Blocks
 
 - [Chunk](./reference/chunk.md) - High-performance immutable sequences
+<<<<<<< HEAD
 - [Scope](./reference/resource-management-di/scope.md) - Compile-time safe resource management and DI
 - [Wire](./reference/resource-management-di/wire.md) - Recipes for constructing services and dependencies
+=======
+- [Scope](./reference/resource-management/scope.md) - Compile-time safe resource management and DI
+- [Wire](./reference/resource-management/wire.md) - Recipes for constructing services and dependencies
+>>>>>>> origin/main
 - [TypeId](./reference/typeid.md) - Type identity and metadata
 - [Context](./reference/context.md) - Type-indexed heterogeneous collections
 - [Docs (Markdown)](./reference/docs.md) - Markdown parsing and rendering

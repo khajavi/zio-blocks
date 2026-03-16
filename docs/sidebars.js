@@ -42,6 +42,7 @@ const sidebars = {
          {
            type: "category",
            label: "Resource Management & DI",
+<<<<<<< HEAD
            link: { type: "doc", id: "reference/resource-management-di/index" },
            items: [
              "reference/resource-management-di/resource",
@@ -49,9 +50,24 @@ const sidebars = {
              "reference/resource-management-di/wire",
            ]
          },
+=======
+           link: { type: "doc", id: "reference/resource-management/index" },
+           items: [
+             "reference/resource-management/scope",
+             "reference/resource-management/resource",
+             "reference/resource-management/wire",
+             "reference/resource-management/unscoped",
+             "reference/resource-management/defer-handle",
+             "reference/resource-management/finalizer",
+             "reference/resource-management/finalization",
+           ]
+         },
+         "reference/combinators",
+>>>>>>> origin/main
          "reference/docs",
          "reference/json",
          "reference/json-patch",
+         "reference/json-differ",
          "reference/json-schema",
          "reference/xml",
          "reference/syntax",
@@ -64,6 +80,7 @@ const sidebars = {
       type: "category",
       label: "Guides",
       items: [
+        "guides/compile-time-resource-safety-with-scope",
         "guides/zio-schema-migration",
         "guides/query-dsl-reified-optics",
         "guides/query-dsl-sql",

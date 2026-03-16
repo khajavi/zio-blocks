@@ -107,7 +107,7 @@ jobs:
 
   testJS:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     strategy:
       fail-fast: false
       matrix:
@@ -128,8 +128,18 @@ jobs:
           apps: sbt
       - name: Cache scala dependencies
         uses: coursier/cache-action@v8
-      - name: Run tests and compile docs
-        run: sbt ++${{ matrix.scala }} test${{ matrix.platform }} doc${{ matrix.platform }}
+      - name: Run Scala 2 JS tests (batch 1)
+        if: ${{ startsWith(matrix.scala, '2.') }}
+        run: sbt "++${{ matrix.scala }}; testJS1; docJS1"
+      - name: Run Scala 2 JS tests (batch 2)
+        if: ${{ startsWith(matrix.scala, '2.') }}
+        run: sbt "++${{ matrix.scala }}; testJS2; docJS2"
+      - name: Run Scala 3 JS tests (batch 1)
+        if: ${{ startsWith(matrix.scala, '3.') }}
+        run: sbt "++${{ matrix.scala }}; testJS1"
+      - name: Run Scala 3 JS tests (batch 2)
+        if: ${{ startsWith(matrix.scala, '3.') }}
+        run: sbt "++${{ matrix.scala }}; testJS2"
 
   ci:
     runs-on: ubuntu-latest
