@@ -7,7 +7,7 @@ title: "Result"
 
 `Result[Ok, Err]` is a type alias for `WitResult[Ok, Err]`, providing methods to construct, manipulate, and convert results:
 
-```text
+```scala
 object Result {
   def ok[Ok](value: Ok): Result[Ok, Nothing]
   def err[Err](value: Err): Result[Nothing, Err]
