@@ -1,0 +1,44 @@
+name: TEMP verify release-docs setup-node fix
+
+# Temporary, throwaway workflow to verify PR #1553 (remove `cache: 'npm'`
+# from the Release Docs job). Runs an A/B experiment on real GitHub infra:
+#   - broken-with-cache: reproduces the bug (setup-node + cache:'npm', no
+#     root lockfile) -> expected to FAIL with "Dependencies lock file is
+#     not found". Marked continue-on-error so the run stays green.
+#   - fixed-no-cache: the PR's config (no cache:) -> expected to PASS.
+# Publishes nothing. Delete after verifying.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  broken-with-cache:
+    name: OLD config (cache:'npm') — expected to FAIL
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v7
+      - name: Setup NodeJs (with cache — reproduces bug A)
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24.12.0
+          registry-url: https://registry.npmjs.org
+          cache: 'npm'
+
+  fixed-no-cache:
+    name: FIXED config (no cache) — expected to PASS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v7
+      - name: Setup NodeJs (no cache — the PR #1553 fix)
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24.12.0
+          registry-url: https://registry.npmjs.org
+      - name: Sanity check
+        run: |
+          node --version
+          npm --version
+          echo "setup-node@v7 with registry-url and NO cache:'npm' succeeded — bug A fix verified"
