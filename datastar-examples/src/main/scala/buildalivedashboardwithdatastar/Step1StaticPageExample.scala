@@ -7,8 +7,7 @@ import zio.http.datastar._
 import Glue._
 
 /**
- * Build a Live Counter and Dashboard with Datastar — Step 1: A Page with
- * Signals
+ * Build a Live Dashboard with Datastar — Step 1: A Page with Signals
  *
  * Serves a page that loads Datastar, declares one signal and shows it with
  * `dataText`. Nothing on the page can change the signal yet.

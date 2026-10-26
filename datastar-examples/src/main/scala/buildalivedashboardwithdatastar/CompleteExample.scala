@@ -9,7 +9,7 @@ import zio.http.datastar._
 import Glue._
 
 /**
- * Build a Live Counter and Dashboard with Datastar — the complete example
+ * Build a Live Dashboard with Datastar — the complete example
  *
  * One page with a "Take a reading" button and a live dashboard. The button
  * `POST`s the signals; the server decodes them and answers with a

@@ -6,7 +6,7 @@ import java.net.http.{HttpClient, HttpRequest, HttpResponse}
 import java.nio.charset.StandardCharsets
 
 /**
- * Build a Live Counter and Dashboard with Datastar — a test client
+ * Build a Live Dashboard with Datastar — a test client
  *
  * Sends requests the way Datastar does, with the JDK's
  * `java.net.http.HttpClient`, and prints what comes back, so every step can be

@@ -3,7 +3,7 @@ package buildalivedashboardwithdatastar
 import java.util.Locale
 
 /**
- * Build a Live Counter and Dashboard with Datastar — the weather station model
+ * Build a Live Dashboard with Datastar — the weather station model
  *
  * Three cities and a function that gives each city a reading for every tick.
  * The readings drift up and down in a fixed pattern, so every run of the

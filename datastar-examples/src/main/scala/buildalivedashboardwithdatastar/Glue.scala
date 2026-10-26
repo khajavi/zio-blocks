@@ -9,7 +9,7 @@ import zio.blocks.streams.Stream
 import zio.http._
 
 /**
- * Build a Live Counter and Dashboard with Datastar — the glue
+ * Build a Live Dashboard with Datastar — the glue
  *
  * Three things the datastar module does not provide yet: the `<script
  * type="module">` tag that loads Datastar, a way to read the signals the

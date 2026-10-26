@@ -8,8 +8,7 @@ import zio.http.datastar._
 import Glue._
 
 /**
- * Build a Live Counter and Dashboard with Datastar — Step 4: Swapping a
- * Fragment
+ * Build a Live Dashboard with Datastar — Step 4: Swapping a Fragment
  *
  * The answer to a click now has two events: a `patchSignals` that sets the
  * counter and a `patchElements` that replaces the `#latest` paragraph with the

@@ -1,6 +1,6 @@
 ---
 id: build-a-live-dashboard-with-datastar
-title: "Build a Live Counter and Dashboard with Datastar"
+title: "Build a Live Dashboard with Datastar"
 description: "Build a Datastar weather station: a button that posts its signals, a server that patches the page, and a dashboard streamed over one open connection."
 keywords:
   - "Datastar"

@@ -9,7 +9,7 @@ import zio.http.datastar._
 import Glue._
 
 /**
- * Build a Live Counter and Dashboard with Datastar — Step 5: A Live Dashboard
+ * Build a Live Dashboard with Datastar — Step 5: A Live Dashboard
  *
  * The page opens one `GET /dashboard/stream` when it loads, and the server
  * keeps that response open, sending a new `patchElements` event with the whole

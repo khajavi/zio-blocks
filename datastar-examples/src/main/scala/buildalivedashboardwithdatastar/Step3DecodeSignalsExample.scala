@@ -10,8 +10,7 @@ import zio.http.datastar._
 import Glue._
 
 /**
- * Build a Live Counter and Dashboard with Datastar — Step 3: Reading the
- * Signals
+ * Build a Live Dashboard with Datastar — Step 3: Reading the Signals
  *
  * The server stops counting by itself. It decodes the signals the browser sends
  * into a case class with the schema JSON codec, and answers with the next
